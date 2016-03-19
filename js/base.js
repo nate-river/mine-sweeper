@@ -11,7 +11,11 @@ window.onload = function(){
   zhicheng = document.getElementById('zhicheng'),
   colors = ['#b9d486','#e28a80','#6cb5f4','#efc83d','#da5254','#5087e1','#689e4e','#e9b02a','#3c64bc','#5c8d44','#9c2220'];
 
-  var gen = function () {
+
+
+  var init = function () {
+
+
     //1.先用一个二维数组来代表某个位置有雷没雷
     var er  = [];
     for ( var i = 0;  i < row;  i++){
@@ -51,12 +55,9 @@ window.onload = function(){
         lei.push(_er[i][j]);
       }
     }
-    return lei;
-  }
-  var lei = gen();
 
 
-  var init = function () {
+
     var tmplate = '<div class="zhezhao" id="zhezhao"> <div id = "gameover"> Game over! </div> <div id = "restart"> restart </div> </div>'
     da.innerHTML = tmplate;
     zhezhao = document.getElementById('zhezhao');
